@@ -4,7 +4,8 @@
   "description": "Cour de Programation fonctionelle",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rd dist /S /Q && tsc"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/TheNoobProgrammeur/JScour#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "typescript": "^3.7.3"
   }
 }
