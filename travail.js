@@ -10,8 +10,8 @@ function addTache(taches, evt) {
     return newTaches;
 };
 
-function delTache (tache, evt) {
-    newTache = taches.filter(evts => evts != evt);
+function delTache (taches, evt) {
+    const newTache = taches.filter(evts => evts != evt);
     return newTache
 };
 

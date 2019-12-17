@@ -10,3 +10,9 @@ function addTache(taches, evt) {
     return newTaches;
 }
 exports.addTache = addTache;
+function delTache(taches, evt) {
+    const newTaches = taches.filter(evts => evts != evt);
+    return newTaches;
+}
+exports.delTache = delTache;
+;

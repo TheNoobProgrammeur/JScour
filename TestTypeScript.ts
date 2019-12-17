@@ -12,6 +12,12 @@ function addTache(taches:evenement[], evt:evenement):evenement[] {
     return newTaches;
 }
 
+function delTache (taches:evenement[], evt:evenement):evenement[] {
+    const  newTaches = taches.filter(evts => evts != evt);
+    return newTaches
+};
 
 
-export {creerTache,addTache};
+
+
+export {creerTache,addTache,delTache};
