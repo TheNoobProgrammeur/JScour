@@ -66,9 +66,13 @@ it("Modifier Taches",()=>{
     const titreBis = "Titre 1bis";
     const descriptionBis  = "Description 1bis";
     evtBis = creerTache(titreBis,descriptionBis);
+    const titre2 = "Titre 2";
+    const description2  = "Description 2";
+    evt2 = creerTache(titre2,description2);
     tasks.addTache(evt);
+    tasks.addTache(evt2);
     tasks.modifier(evt,evtBis);
-    expect(tasks.taches).toEqual([{"titre":"Titre 1bis","description":"Description 1bis"}])
+    expect(tasks.taches).toEqual([{"titre":"Titre 2","description":"Description 2"},{"titre":"Titre 1bis","description":"Description 1bis"}])
 
 });
 
