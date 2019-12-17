@@ -1,0 +1,22 @@
+{
+  "name": "jscour",
+  "version": "1.0.0",
+  "description": "Cour de Programation fonctionelle",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheNoobProgrammeur/JScour.git"
+  },
+  "author": "aberthier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheNoobProgrammeur/JScour/issues"
+  },
+  "homepage": "https://github.com/TheNoobProgrammeur/JScour#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
