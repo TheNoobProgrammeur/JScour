@@ -4,10 +4,10 @@ function creerTache(titre,description) {
     return {"titre":titre,"description":description};
 };
 
-function addTache(tache, evt) {
-    const  newTache = [... tache];
-    newTache.push(evt);
-    return newTache;
+function addTache(taches, evt) {
+    const  newTaches = [... taches];
+    newTaches.push(evt);
+    return newTaches;
 };
 
 function delTache (tache, evt) {
