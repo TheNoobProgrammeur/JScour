@@ -22,9 +22,9 @@ function lecteurCommande (listElement, robot){
         d: reOrinetation
     };
 
-
-    listElement.forEach(element => robot = mapCommande[element](element,robot));
-
+    const reduceur = (robot,element) => mapCommande[element](element,robot);
+    robot = listElement.reduce(reduceur,robot);
+    //listElement.flatMap(element => mapCommande[element](element,robot));
     return {... robot}
 }
 

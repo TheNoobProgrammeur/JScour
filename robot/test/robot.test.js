@@ -110,8 +110,8 @@ it('Deplacement du robot {x:10,y:10}  avec une liste ["a","a"] => {x:8,y:10} ', 
         y_position: index.getRandomInt(50,10),
         orientationRobor: orientationO,
     };
-    evts = ["a","a"];
-    updateRobot = index.lecteurCommande(evts,robot)
+    let evts = ["a","a"];
+    updateRobot = index.lecteurCommande(evts,robot);
     expect(updateRobot.x_position).toBe(8);
     expect(updateRobot.y_position).toBe(10);
     expect(updateRobot.orientationRobor).toBe("O")
@@ -125,8 +125,8 @@ it('Deplacement du robot {x:10,y:10, orienter: O}  avec une liste ["a","a","d"] 
         y_position: index.getRandomInt(50,10),
         orientationRobor: orientationO,
     };
-    evts = ["a","a","d"];
-    updateRobot = index.lecteurCommande(evts,robot)
+    let evts = ["a","a","d"];
+    updateRobot = index.lecteurCommande(evts,robot);
     expect(updateRobot.x_position).toBe(8);
     expect(updateRobot.y_position).toBe(10);
     expect(updateRobot.orientationRobor).toBe("N")
