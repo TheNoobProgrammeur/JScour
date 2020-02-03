@@ -37,12 +37,24 @@ export function deplacement (element, robot,width,height,echelle,obstacles) {
         r: {x: {E: -1, O: 1, N: 0 , S: 0}, y: {E: 0, O: 0, N: -1 , S: 1}}
     };
 
+    const possition_originel = {
+        y:robot.y_position,
+        x:robot.x_position
+    };
+
     const possition = {
         y: deplacer(robot.y_position,robot.orientationRobor,height,mapDemMap[element].y,echelle),
         x: deplacer(robot.x_position,robot.orientationRobor,width,mapDemMap[element].x,echelle)
     };
 
-    
+
+    obstacles.forEach(obstacle => {
+        if (possition.x == obstacle.x && possition.y == obstacle.y ){
+            throw new Error("obstacle en {x:"+possition.x+",y:"+possition.y+"}")
+        }
+    });
+
+
 
     return {... robot, x_position: possition.x, y_position: possition.y}
 }
@@ -66,3 +78,4 @@ export  function fabricRobot(width,height){
         orientationRobor: listeOrientation[getRandomInt(4)],
     };
 }
+

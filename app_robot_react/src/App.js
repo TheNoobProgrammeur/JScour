@@ -76,8 +76,14 @@ const App = (props) => {
             }}/> <br />
             <button onClick={() => {
                 const command = commandValeur.split("");
-                const robot = lecteurCommande(command,rover,width,height,echelle,obstacles);
-                setRover(robot);
+                try {
+                    const robot = lecteurCommande(command, rover, width, height, echelle, obstacles);
+                    setRover(robot);
+                }
+                catch(e){
+                    alert(e);
+                }
+
             }}>valider</button>
             <Stage className="canvas" width={width} height={height} >
                 <Layer>
